@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', 'LogoCreatorController@home')->name('/');
-Route::get('/getIcons', 'LogoCreatorController@searchIcons')->name('/');
+Route::get('/', 'LogoMakerController@home')->name('/');
+Route::get('/getIcons', 'LogoMakerController@searchIcons')->name('/getIcons');
+Route::get('/saveImage', 'LogoMakerController@saveImage')->name('/saveImage');
+
+
+
 
 Route::group(['prefix' => '/api/'], function () {
-	Route::post('/search/logos', 'LogoCreatorController@searchApi')->name('search-logos');
+	Route::post('/search/logos', 'LogoMakerController@searchApi')->name('search-logos');
 });

@@ -1,13 +1,18 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-3 icon-box">
-			<div class="icon-design">
-				<i class="glyphicon glyphicon-envelope"></i>
-			</div>
+<img src="{{ asset('imgs/loading.gif') }}" style="display: none" class="loading">
 
-			<div class="icon-text">
-				Lapis
-			</div>
-		</div>
-	</div>
+<div id="icons-results-page" style="display: none" class="half-page-top page-content">
+    <p class="half-page-top-header">
+        Your Results
+    </p>
+    <p class="half-page-top-resume">
+        Click on the chosen logo to download a PNG file.
+    </p>
+    <p class="half-page-top-resume">
+       If you didn’t like any of the results, just click “Generate more”.
+    </p>
+
+    <div id="result-icons"></div>
+
+    @include('components.download-icon-modal')
 </div>
+

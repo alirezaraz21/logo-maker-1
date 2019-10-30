@@ -7,7 +7,7 @@
 
 		<fieldset class="fieldset-border">
 			<legend class="legend-border">Keywords</legend>
-			<input type="text" value="bike, bicycle, ride a bike, bike rental, free bike, testing bikes" data-role="tagsinput" class="fieldset-input" id="keywords" placeholder="Your Keywords">
+			<input type="text" value="bike" data-role="tagsinput" class="fieldset-input" id="keywords" placeholder="Your Keywords">
 		</fieldset>	  
 	  	<button type="submit" onclick="getIcons()" class="btn btn-primary btn-submit-search">SUBMIT</button>
 	</div>

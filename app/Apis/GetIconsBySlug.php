@@ -2,21 +2,25 @@
 
 namespace App\Apis;
 
-use App\Services\CurlService as curl;
+use App\Services\OAuthWrapper\OAuthRequestCall;
 
 class GetIconsBySlug
 {
-    //search
-    private $url = 'http://api.thenounproject.com/collection/bike/icons';
-// https://cors-anywhere.herokuapp.com/http://api.thenounproject.com/collection/bike/icons
+    private $url = 'http://api.thenounproject.com/collection/#slug/icons';
+
     /**
-     * Executa busca no blog da Uplexis.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return view
+     * @param  string  $slug
+     * @return json
      */
-    public function run($slugs)
+    public function run($slug, $limit, $offset)
     {   
-        return (new curl())->curlGet($this->url);
+	   return (new OAuthRequestCall())->call(
+            str_replace('#slug', $slug, $this->url),
+            [
+                "limit" => $limit,
+                "offset" => $offset
+            ],
+        );
     }
 }

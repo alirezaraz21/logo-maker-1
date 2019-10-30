@@ -18,13 +18,16 @@
   </head>
 
   <body>
-    <main class="main">
+    <main id="main">
       @yield('content')
     </main>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="{{ asset('bootstrap-tagsinput/src/bootstrap-tagsinput.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js"></script>
+    <script src="{{ asset('js/html2canvas.min.js') }}" defer></script>
     <script src="{{ asset('js/scripts.js') }}" defer></script>
   </body>
 </html>
